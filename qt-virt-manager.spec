@@ -12,6 +12,7 @@ BuildRequires:	pkgconfig(libvirt)
 BuildRequires:  cmake
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(spice-protocol)
+BuildRequires:  typelib(SpiceClientGLib)
 BuildRequires:  pkgconfig(libcacard)
 
 Requires:	libvirt-utils
