@@ -1,6 +1,6 @@
 Summary:	Qt Virtual Machine Manager
 Name:		qt-virt-manager
-Version:	0.16.38
+Version:	0.22.42
 Release:	1
 License:	GPLv2+
 URL:		https://github.com/F1ash/qt-virt-manager
