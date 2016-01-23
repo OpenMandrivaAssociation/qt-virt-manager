@@ -7,14 +7,13 @@ URL:		https://github.com/F1ash/qt-virt-manager
 Source0:        https://github.com/F1ash/qt-virt-manager/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildRequires:	qt5-qtbase-devel
 BuildRequires:	pkgconfig(Qt5Svg)
-BuildRequires:	pkgconfig(qtermwidget5)
 BuildRequires:	pkgconfig(libvirt)
-BuildRequires:  cmake
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(spice-protocol)
-BuildRequires:  typelib(SpiceClientGLib)
 BuildRequires:  pkgconfig(libcacard)
-
+BuildRequires:  cmake
+BuildRequires:	cmake(qtermwidget5)
+BuildRequires:  typelib(SpiceClientGLib)
 Requires:	libvirt-utils
 Requires:       qemu
 #Requires:      spice-server-client
