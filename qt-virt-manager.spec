@@ -1,11 +1,12 @@
 Summary:	Qt Virtual Machine Manager
 Name:		qt-virt-manager
-Version:	0.22.42
+Version:	0.22.45
 Release:	1
 License:	GPLv2+
 URL:		https://github.com/F1ash/qt-virt-manager
 Source0:        https://github.com/F1ash/qt-virt-manager/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-BuildRequires:	qt5-qtbase-devel
+BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	pkgconfig(Qt5Xml)
 BuildRequires:	pkgconfig(Qt5Svg)
 BuildRequires:	pkgconfig(Qt5Multimedia)
 BuildRequires:	pkgconfig(libvirt)
@@ -18,7 +19,7 @@ BuildRequires:  typelib(SpiceClientGLib)
 Requires:	libvirt-utils
 Requires:       qemu
 #Requires:      spice-server-client
-Requires:       spice-vdagent
+#Requires:       spice-vdagent
 # for scrubbing (optional)
 #Requires:       scrub
 # for ssh-transported remote connections (optional)
@@ -38,7 +39,7 @@ Uses libvirt as the backend management API.
 %cmake_qt5 -DBUILD_QT_VERSION=5
 
 %build
-%ninja
+%ninja -C build
 
 %install
 %ninja_install -C build
