@@ -27,8 +27,6 @@ Requires:       qemu
 #Requires:       spice-vdagent
 # for scrubbing (optional)
 #Requires:       scrub
-# for ssh-transported remote connections (optional)
-Requires:       nc6
 
 %description
 Qt Virtual Machine Manager provides a graphical tool for
