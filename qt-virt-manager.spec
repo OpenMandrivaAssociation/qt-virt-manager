@@ -1,7 +1,7 @@
 Summary:	Qt Virtual Machine Manager
 Name:		qt-virt-manager
-Version:	0.22.45
-Release:	2
+Version:	0.70.91
+Release:	1
 License:	GPLv2+
 URL:		https://github.com/F1ash/qt-virt-manager
 Source0:        https://github.com/F1ash/qt-virt-manager/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
@@ -12,8 +12,13 @@ BuildRequires:	pkgconfig(Qt5Multimedia)
 BuildRequires:	pkgconfig(libvirt)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(spice-protocol)
+BuildRequires:  pkgconfig(libvncclient)
 BuildRequires:  pkgconfig(libcacard)
 BuildRequires:  cmake
+BuildRequires:  qt5-qtbase-devel
+BuildRequires:  spice-gtk-devel
+BuildRequires:  krdc-devel
+BuildRequires:  qt5-linguist-tools
 BuildRequires:	cmake(qtermwidget5)
 BuildRequires:  typelib(SpiceClientGLib)
 Requires:	libvirt-utils
@@ -39,15 +44,17 @@ Uses libvirt as the backend management API.
 %cmake_qt5 -DBUILD_QT_VERSION=5
 
 %build
-%ninja -C build
+%make_build -C build
 
 %install
-%ninja_install -C build
+%make_install -C build
 
 %files
 %license LICENSE
 %doc README.md Licenses Changelog
-%{_bindir}/%{name}
-%{_datadir}/applications/%{name}.desktop
-%{_datadir}/%{name}
-%{_datadir}/icons/hicolor/256x256/apps/virtual-engineering.png
+%{_bindir}/qt5-virt-manager
+%{_bindir}/qt5-remote-viewer
+%{_datadir}/applications/qt5-*.desktop
+%{_datadir}/qt5-virt-manager
+%{_datadir}/icons/hicolor/*/apps/*.png
+%{_datadir}/mime/packages/*.xml
