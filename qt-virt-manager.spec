@@ -10,6 +10,7 @@ BuildRequires: qmake5
 BuildRequires: cmake ninja
 BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5Widgets)
+BuildRequires: cmake(Qt5Xml)
 BuildRequires: cmake(qtermwidget5)
 BuildRequires: %mklibname -d krdccore-qt5
 BuildRequires: pkgconfig(spice-client-glib-2.0)
