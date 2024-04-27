@@ -11,6 +11,7 @@ BuildRequires: cmake ninja
 BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5Widgets)
 BuildRequires: cmake(Qt5Svg)
+BuildRequires: cmake(Qt5Multimedia)
 BuildRequires: cmake(Qt5Xml)
 BuildRequires: cmake(qtermwidget5)
 BuildRequires: %mklibname -d krdccore-qt5
