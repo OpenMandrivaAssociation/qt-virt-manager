@@ -6,6 +6,7 @@ Summary: A GUI application for managing virtual machines
 URL: https://f1ash.github.io/qt-virt-manager/
 License: GPL-2.0
 Group: User Interface/Desktops
+BuildRequires: qmake5
 BuildRequires: cmake ninja
 BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5Widgets)
