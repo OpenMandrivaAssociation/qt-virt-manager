@@ -17,6 +17,7 @@ BuildRequires: cmake(Qt5LinguistTools)
 BuildRequires: cmake(qtermwidget5)
 BuildRequires: %mklibname -d krdccore-qt5
 BuildRequires: pkgconfig(spice-client-glib-2.0)
+BuildRequires: pkgconfig(libvirt)
 Requires: qt-remote-viewer = %{EVRD}
 
 %description
